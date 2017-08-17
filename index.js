@@ -10,7 +10,11 @@ if (!Symbol) {
 	Symbol.iterator = Symbol('Symbol.iterator');
 }
 
-module.exports = Symbol;
+if (typeof module != 'undefined') {
+	Symbol.default = Symbol;
+	Symbol.__esModule = true;
 
-Symbol.default = Symbol;
-Symbol.__esModule = true;
+	module.exports = Symbol;
+} else {
+	this.Symbol = Symbol;
+}
