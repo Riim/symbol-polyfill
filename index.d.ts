@@ -1,1 +1,1 @@
-export default function Symbol(key?: string): symbol;
+export declare function Symbol(key?: string): symbol;

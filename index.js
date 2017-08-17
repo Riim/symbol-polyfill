@@ -14,7 +14,7 @@ if (typeof module != 'undefined') {
 	Symbol.default = Symbol;
 	Symbol.__esModule = true;
 
-	module.exports = Symbol;
+	module.exports = Symbol.Symbol = Symbol;
 } else {
 	this.Symbol = Symbol;
 }
