@@ -1,4 +1,5 @@
-var Symbol = Function('return this;')().Symbol;
+var global = Function('return this;')();
+var Symbol = global.Symbol;
 
 var idCounter = 0;
 
@@ -10,11 +11,4 @@ if (!Symbol) {
 	Symbol.iterator = Symbol('Symbol.iterator');
 }
 
-if (typeof module != 'undefined') {
-	Symbol.default = Symbol;
-	Symbol.__esModule = true;
-
-	module.exports = Symbol.Symbol = Symbol;
-} else {
-	this.Symbol = Symbol;
-}
+(typeof module != 'undefined' ? exports : global).Symbol = Symbol;
