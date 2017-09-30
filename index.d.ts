@@ -1,1 +1,5 @@
-export declare function Symbol(key?: string): symbol;
+declare let SymbolConstructor: typeof Symbol;
+
+export {
+	SymbolConstructor as Symbol
+};
